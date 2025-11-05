@@ -4,7 +4,7 @@
 <p align="center">
   <a href="https://github.com/Mahiamk"><img src="https://img.shields.io/github/followers/Mahiamk?label=Follow&style=social"></a>
   <a href="mailto:mahikomohammed@gmail.com"><img src="https://img.shields.io/badge/Email-me-blue?style=flat-square&logo=gmail"></a>
-  <a href="https://www.linkedin.com/in/anwar4u/"><img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin"></a>
+  <a href="https://www.linkedin.com/in/anwarkoji4u/"><img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin"></a>
 </p>
 
 ---
