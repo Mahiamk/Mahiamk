@@ -49,8 +49,6 @@ I'm a driven **Full-Stack Developer** and **Computer Science student**, currentl
 
 </div>
 
-> Numbers above are placeholders — plug in a [Wakatime](https://wakatime.com) badge for live coding-hour tracking, and update the project count as your portfolio grows (see the *Setup Notes* at the bottom for exact steps).
-
 ---
 
 ## 🔧 Tech Stack
@@ -98,8 +96,6 @@ I'm a driven **Full-Stack Developer** and **Computer Science student**, currentl
   </tr>
 </table>
 
-> 📌 Replace these with links to your actual pinned repositories — see *Setup Notes* below for a quick guide.
-
 </div>
 
 ---
@@ -126,7 +122,6 @@ I'm a driven **Full-Stack Developer** and **Computer Science student**, currentl
 </div>
 
 
-> This animated snake needs a one-time GitHub Actions setup — instructions are in *Setup Notes* below.
 
 ---
 
