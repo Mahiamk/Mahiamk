@@ -124,40 +124,7 @@ I'm a driven **Full-Stack Developer** and **Computer Science student**, currentl
 <div align="center">
   <img src="https://raw.githubusercontent.com/Mahiamk/Mahiamk/output/github-contribution-grid-snake.svg" alt="snake animation"/>
 </div>
-name: Generate Snake Animation
 
-on:
-  schedule:
-    - cron: "0 0 * * *" # Runs every day
-  workflow_dispatch:
-
-permissions:
-  contents: write
-
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: Mahiamk
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: dist
-
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 > This animated snake needs a one-time GitHub Actions setup — instructions are in *Setup Notes* below.
 
