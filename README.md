@@ -124,27 +124,40 @@ I'm a driven **Full-Stack Developer** and **Computer Science student**, currentl
 <div align="center">
   <img src="https://raw.githubusercontent.com/Mahiamk/Mahiamk/output/github-contribution-grid-snake.svg" alt="snake animation"/>
 </div>
-- uses: Platane/snk@v3
-  with:
-    # github user name to read the contribution graph from (**required**)
-    # using action context var `github.repository_owner` or specified user
-    github_user_name: ${{ github.Mahiamk }}
+name: Generate Snake Animation
 
-    # list of files to generate.
-    # one file per line. Each output can be customized with options as query string.
-    #  supported options:
-    #  - palette:           A preset of color, one of [github, github-dark, github-light]
-    #  - color_snake:       Color of the snake
-    #  - color_dots:        Coma separated list of dots color.
-    #                       The first one is 0 contribution, then it goes from the low contribution to the highest.
-    #                       Exactly 5 colors are expected.
-    #  - color_background:  Color of the background (for gif only)
+on:
+  schedule:
+    - cron: "0 0 * * *" # Runs every day
+  workflow_dispatch:
 
-    outputs: |
-      dist/github-snake.svg
-      dist/github-snake-dark.svg?palette=github-dark
-      dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9&color_background=#aaaaaa
+permissions:
+  contents: write
 
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: Mahiamk
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 > This animated snake needs a one-time GitHub Actions setup — instructions are in *Setup Notes* below.
 
